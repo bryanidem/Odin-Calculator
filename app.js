@@ -1,13 +1,26 @@
 const buttons = document.querySelectorAll("button");
 const display = document.querySelector(".display");
 let displayValue = "";
+let num1 = "";
+let num2 = "";
+let num1Flag = true;
 
 buttons.forEach((button) => {
   button.addEventListener("click", (e) => {
     if (e.target.className === "digit") {
       displayValue += e.target.textContent;
       display.textContent = displayValue;
+      if (num1Flag) {
+        num1 = displayValue;
+      } else {
+        num2 = displayValue;
+      }
+    } else if (e.target.className === "operation") {
+      num1Flag = false;
+      displayValue = "";
+      display.textContent = displayValue;
     }
+    console.log(num1, num2, num1Flag);
   });
 });
 
