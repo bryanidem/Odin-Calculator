@@ -1,3 +1,16 @@
+const buttons = document.querySelectorAll("button");
+const display = document.querySelector(".display");
+let displayValue = "";
+
+buttons.forEach((button) => {
+  button.addEventListener("click", (e) => {
+    if (e.target.className === "digit") {
+      displayValue += e.target.textContent;
+      display.textContent = displayValue;
+    }
+  });
+});
+
 const add = (num1, num2) => num1 + num2;
 const substract = (num1, num2) => num1 - num2;
 const multiply = (num1, num2) => num1 * num2;
