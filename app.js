@@ -20,7 +20,7 @@ const operate = (operator, num1, num2) => {
       return divide(num1, num2);
       break;
     default:
-      return "operation not founfd";
+      return "operation not found";
       break;
   }
 };
