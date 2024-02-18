@@ -1,6 +1,37 @@
+@font-face {
+  font-family: Seven-segments;
+  src: url(fonts/Seven-Segment.ttf);
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url(fonts/Roboto-Regular.ttf);
+}
+
 * {
   margin: 0;
   padding: 0;
+  font-family: Roboto, "Courier New", Courier, monospace;
+}
+
+h1 {
+  font-size: 60px;
+  background-color: #773344;
+  width: 100%;
+  text-align: center;
+  color: #fffcf2;
+}
+
+footer {
+  background-color: #773344;
+  width: 100%;
+  color: #fffcf2;
+  text-align: center;
+}
+
+a {
+  color: #f49cbb;
+  text-decoration: none;
 }
 
 body {
@@ -23,6 +54,7 @@ body {
 }
 
 .display {
+  font-family: Seven-segments, "Courier New", Courier, monospace;
   height: 100px;
   background-color: #fffcf2;
   display: flex;
@@ -64,5 +96,10 @@ button {
 .all-clear:hover,
 .del:hover {
   background-color: #ff8552;
+  transform: scale(0.9);
+}
+
+#equal:hover {
+  background-color: #62929e;
   transform: scale(0.9);
 }

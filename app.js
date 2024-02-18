@@ -52,6 +52,22 @@ buttons.forEach((button) => {
           num1Flag = false;
         }
       }
+    } else if (e.target.className === "all-clear") {
+      num1 = "";
+      num2 = "";
+      displayValue = "";
+      display.textContent = "";
+      num1Flag = true;
+    } else if (e.target.className === "del") {
+      if (num1Flag) {
+        num1 = num1.slice(0, -1);
+        displayValue = num1;
+        display.textContent = displayValue;
+      } else {
+        num2 = num2.slice(0, -1);
+        displayValue = num2;
+        display.textContent = displayValue;
+      }
     }
   });
 });
